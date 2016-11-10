@@ -15,3 +15,5 @@ git submodule update
 cd ..
 mklink _vimrc .\vimfiles\_vimrc
 ```
+
+For Mac/Linux switch vimfiles to .vim and _vimrc to .vimrc
