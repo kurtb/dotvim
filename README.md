@@ -8,12 +8,12 @@ http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-patho
 On windows, from an admin command prompt, do a:
 
 ```Batchfile
-git clone https://github.com/kurtb/dotvim.git vimfiles
-cd vimfiles
+git clone https://github.com/kurtb/dotvim.git .vim
+cd .vim
 git submodule init
 git submodule update
 cd ..
-mklink _vimrc .\vimfiles\_vimrc
+mklink .vimrc .\vimfiles\.vimrc
 ```
 
-For Mac/Linux switch vimfiles to .vim and _vimrc to .vimrc
+For Windows switch .vim to vimfiles and .vimrc to _vimrc

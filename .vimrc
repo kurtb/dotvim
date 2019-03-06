@@ -10,6 +10,3 @@ filetype plugin indent on
 :set smarttab
 
 :set backspace=indent,eol,start
-
-:set lines=60 columns=160
-:set guifont=Consolas:h10:cANSI
