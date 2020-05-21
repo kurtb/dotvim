@@ -13,7 +13,7 @@ cd .vim
 git submodule init
 git submodule update
 cd ..
-ln ~/.vim/.vimrc .vimrc
+ln -s /home/kurtb/.vim/.vimrc .vimrc
 ```
 
 For Windows switch .vim to vimfiles and .vimrc to _vimrc
