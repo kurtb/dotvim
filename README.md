@@ -13,10 +13,10 @@ Neovim configuration using [lazy.nvim](https://github.com/folke/lazy.nvim) for p
 
 ```bash
 git clone https://github.com/kurtb/dotvim.git ~/dev/dotvim
-ln -s ~/dev/dotvim/nvim ~/.config/nvim
+bash ~/dev/dotvim/install.sh
 ```
 
-Open `nvim` — lazy.nvim bootstraps itself and installs all plugins automatically on first launch.
+The install script symlinks `~/.config/nvim` to this repo and is safe to re-run. Then open `nvim` — lazy.nvim bootstraps itself and installs all plugins automatically on first launch.
 
 ## Managing plugins
 
@@ -167,8 +167,3 @@ Nothing to configure; it just works.
 | `Ctrl-h/j/k/l` | Move between splits |
 | `Esc` (normal mode) | Clear search highlight |
 
----
-
-## Legacy Vim config
-
-The old `.vimrc` (Pathogen-based) is kept for reference but is no longer maintained.

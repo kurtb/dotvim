@@ -8,14 +8,12 @@ This is a **Neovim** configuration repository using [lazy.nvim](https://github.c
 
 ## Setup
 
-To install on a new system:
-
 ```bash
 git clone https://github.com/kurtb/dotvim.git ~/dev/dotvim
-ln -s ~/dev/dotvim/nvim ~/.config/nvim
+bash ~/dev/dotvim/install.sh
 ```
 
-Open `nvim` — lazy.nvim auto-installs itself and all plugins on first launch. No git submodules needed; lazy.nvim manages plugins natively in `~/.local/share/nvim/`.
+The install script symlinks `~/.config/nvim` to this repo and is safe to re-run. lazy.nvim auto-installs itself and all plugins on first launch — no git submodules needed.
 
 ## Repository Structure
 
@@ -33,7 +31,6 @@ nvim/
       git.lua           ← vim-fugitive + gitsigns.nvim
       ui.lua            ← tokyonight + lualine + nvim-tree
       editing.lua       ← nvim-surround + Comment.nvim + nvim-autopairs
-.vimrc                  ← legacy Vim config (kept for reference, not maintained)
 ```
 
 ## Adding Plugins

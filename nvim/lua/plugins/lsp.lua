@@ -11,7 +11,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = { "ts_ls", "pyright" },
-                automatic_installation = true,
+                automatic_enable = true,
             })
         end,
     },
@@ -22,14 +22,10 @@ return {
             "williamboman/mason-lspconfig.nvim",
         },
         config = function()
-            local lspconfig = require("lspconfig")
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-            -- TypeScript/JavaScript
-            lspconfig.ts_ls.setup({ capabilities = capabilities })
-
-            -- Python
-            lspconfig.pyright.setup({ capabilities = capabilities })
+            -- Apply capabilities to all LSP servers (Neovim 0.11+ native API)
+            vim.lsp.config("*", {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            })
 
             -- Keymaps on LSP attach
             vim.api.nvim_create_autocmd("LspAttach", {
