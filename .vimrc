@@ -1,3 +1,7 @@
+" NOTE: This config has been superseded by the Neovim config in nvim/.
+" See nvim/init.lua for the current configuration.
+" To use: ln -s ~/dev/dotvim/nvim ~/.config/nvim
+
 execute pathogen#infect()
 
 syntax on
